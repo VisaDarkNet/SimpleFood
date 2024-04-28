@@ -1,1 +1,23 @@
+html,
+body {
+  height: 100%;
+}
 
+body {
+  font-size: 20px;
+  line-height: 1.5;
+  color: $dark;
+  @extend %rubik-400;
+  background-color: $silver-100;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
