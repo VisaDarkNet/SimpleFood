@@ -35,6 +35,7 @@
 
   &__link {
     position: relative;
+    padding: 10px;
   }
 
   &__link:not(:last-child) {
@@ -55,14 +56,6 @@
     right: 2px;
   }
 
-  &__link {
-    padding: 10px;
-  }
-}
-
-.translucent {
-  border-radius: 5px;
-  //он глобальный у всех повторяется 
 }
 
 .translucent:focus {
@@ -85,13 +78,13 @@
 
 .menu-search__link.translucent:hover {
   background-color: rgb(255, 122, 80);
+
 }
 
 .menu-search__link.translucent:active {
   background-color: rgb(255, 242, 237);
   box-shadow: none;
 }
-
 
 .logo.translucent:hover {
   opacity: 0.8;
@@ -101,6 +94,142 @@
   opacity: 0.5;
   box-shadow: none;
 }
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-bottom: 30px;
+  }
+}
+
+.footer-top__form-input {
+  max-width: 200px;
+  width: 100%;
+  font-size: 14px;
+  color: $gray;
+  padding: 13px 15px;
+  border: 1px solid $gray;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.footer-top__form-btn {
+  display: block;
+  font-size: 14px;
+  max-width: 200px;
+  width: 100%;
+  color: #fff;
+  background-color: $orange-900;
+  border-radius: 5px;
+  border: none;
+  position: relative;
+  padding: 13px 23px;
+}
+
+.footer-top__form-btn::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 14px;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/icons/frame.svg');
+}
+
+.menu-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 571px;
+  width: 100%;
+  margin-bottom: 66px;
+  font-size: 18px;
+}
+
+.menu-bottom__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.our-contacts {
+  font-size: 16px;
+
+  &__item {
+    margin-bottom: 15px;
+  }
+}
+
+.our-contacts__item {
+  position: relative;
+  padding-left: 31px;
+
+}
+
+.our-contacts__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+}
+
+.our-contacts--location::before {
+  background-image: url('../images/icons/location.svg');
+}
+
+.our-contacts--calling::before {
+  background-image: url('../images/icons/calling.svg')
+}
+
+.our-contacts--message::before {
+  background-image: url('../images/icons/message.svg');
+}
+
+.social {
+  display: flex;
+  gap: 13px;
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    display: block;
+
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(194, 194, 194, 0.2);
+  padding: 30px;
+
+  &__copy {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+}
+
+
+
 
 
 

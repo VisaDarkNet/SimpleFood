@@ -11,6 +11,30 @@ body {
   background-color: $silver-100;
 }
 
+button {
+  display: inline-block;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  cursor: pointer;
+  font: inherit;
+  outline: transparent;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .main {
   flex-grow: 1;
 }
@@ -20,4 +44,8 @@ body {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.translucent {
+  border-radius: 5px;
 }
