@@ -34,9 +34,46 @@
                 Контакты
               </a>
             </li>
+
+            <li class="menu__item">
+              <a class="menu-search__link translucent" href="#">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="9.76663" cy="9.63009" rx="8.98856" ry="8.88424" stroke="#363853" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M16.0184 16.2708L19.5424 19.7448" stroke="#363853" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu-search__link translucent" href="#">
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 1.17578L3.08 1.5316L4.04301 12.8715C4.12001 13.7976 4.90301 14.5082 5.84301 14.5053H16.752C17.649 14.5072 18.41 13.8549 18.537 12.9772L19.486 6.49532C19.592 5.77083 19.083 5.09872 18.351 4.99395C18.287 4.98505 3.414 4.98011 3.414 4.98011"
+                    stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12.375 8.63337H15.1479" stroke="#363853" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.4043 17.9316C5.70527 17.9316 5.94824 18.1729 5.94824 18.4696C5.94824 18.7673 5.70527 19.0085 5.4043 19.0085C5.10333 19.0085 4.86035 18.7673 4.86035 18.4696C4.86035 18.1729 5.10333 17.9316 5.4043 17.9316Z"
+                    stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.6846 17.9316C16.9856 17.9316 17.2296 18.1729 17.2296 18.4696C17.2296 18.7673 16.9856 19.0085 16.6846 19.0085C16.3836 19.0085 16.1406 18.7673 16.1406 18.4696C16.1406 18.1729 16.3836 17.9316 16.6846 17.9316Z"
+                    stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="menu-search__num">
+                  4
+                </span>
+              </a>
+            </li>
+
           </ul>
+
         </nav>
-        <div class="menu-search">
+
+
+
+        <!-- <div class="menu-search">
           <a class="menu-search__link translucent" href="#">
             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <ellipse cx="9.76663" cy="9.63009" rx="8.98856" ry="8.88424" stroke="#363853" stroke-width="1.5"
@@ -63,13 +100,183 @@
               4
             </span>
           </a>
-        </div>
+        </div> -->
+
+
       </div>
     </div>
   </header>
 
 
   <main class="main">
+
+    <section class="delivery ">
+      <div class="container">
+        <div class="delivery-box">
+          <div class="delivery-left">
+            <h1 class="delivery-left__title">
+              Доставка
+              <span class="delivery-left__span">за 15 минут</span>
+            </h1>
+            <p class="delivery-left__text">
+              Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+            </p>
+            <button class="delivery-left__btn">
+              Заказать
+            </button>
+            <a class="delivery-left__link" href="#">Подробнее</a>
+          </div>
+
+          <div class="delivery-right">
+            <img src="images/scooter.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories ">
+      <div class="container">
+        <h2 class="categories__title">
+          Популярные категории
+        </h2>
+        <ul class="categories__filter">
+          <li class="categories__list ">
+            <button class="categories__btn categories__list--burger">
+              Бургеры
+            </button>
+          </li>
+          <li class="categories__list">
+            <button class="categories__btn categories__list--pizza">
+              Пицца
+            </button>
+          </li>
+          <li class="categories__list">
+            <button class="categories__btn categories__list--sandvich">
+              Сендвичи
+            </button>
+          </li>
+          <li class="categories__list">
+            <button class="categories__btn categories__list--asia">
+              Азиатская кухня
+            </button>
+          </li>
+          <li class="categories__list">
+            <button class="categories__btn categories__list--dish">
+              Cеты
+            </button>
+          </li>
+        </ul>
+
+        <ul class="categories__content">
+
+          <li class="categories__items">
+            <img class="categories__img" src="images/menu/cheeseburger-sheet.png" alt="">
+            <p class="categories__text">Чизбургер с листьями салата</p>
+            <h4 class="categories__price">160 грн.</h4>
+            <button class="categories__basket">В корзину</button>
+          </li>
+
+          <li class="categories__items">
+            <img class="categories__img" src="images/menu/bif-burger.png" alt="">
+            <p class="categories__text">Бифбургер</p>
+            <h4 class="categories__price">190 грн.</h4>
+            <button class="categories__basket">В корзину</button>
+          </li>
+
+          <li class="categories__items">
+            <img class="categories__img" src="images/menu/king-burger.png" alt="">
+            <p class="categories__text">Королевский чизбургер</p>
+            <h4 class="categories__price">260 грн.</h4>
+            <button class="categories__basket">В корзину</button>
+          </li>
+
+          <li class="categories__items">
+            <img class="categories__img" src="images/menu/black-burger.png" alt="">
+            <p class="categories__text">Черный гамбургер</p>
+            <h4 class="categories__price">199 грн.</h4>
+            <button class="categories__basket">В корзину</button>
+          </li>
+
+          <li class="categories__items">
+            <img class="categories__img" src="images/menu/chikin-burger.png" alt="">
+            <p class="categories__text">Чикен бургер</p>
+            <h4 class="categories__price">180 грн.</h4>
+            <button class="categories__basket">В корзину</button>
+          </li>
+
+
+          <li class="categories__items">
+            <img class="categories__img" src="images/menu/cheeseburger-sheet.png" alt="">
+            <p class="categories__text">Чизбургер с листьями салата</p>
+            <h4 class="categories__price">160 грн.</h4>
+            <button class="categories__basket">В корзину</button>
+          </li>
+
+          <li class="categories__items">
+            <img class="categories__img" src="images/menu/bif-burger.png" alt="">
+            <p class="categories__text">Бифбургер</p>
+            <h4 class="categories__price">190 грн.</h4>
+            <button class="categories__basket">В корзину</button>
+          </li>
+
+          <li class="categories__items">
+            <img class="categories__img" src="images/menu/king-burger.png" alt="">
+            <p class="categories__text">Королевский чизбургер</p>
+            <h4 class="categories__price">260 грн.</h4>
+            <button class="categories__basket">В корзину</button>
+          </li>
+
+          <li class="categories__items">
+            <img class="categories__img" src="images/menu/black-burger.png" alt="">
+            <p class="categories__text">Черный гамбургер</p>
+            <h4 class="categories__price">199 грн.</h4>
+            <button class="categories__basket">В корзину</button>
+          </li>
+
+          <li class="categories__items">
+            <img class="categories__img" src="images/menu/chikin-burger.png" alt="">
+            <p class="categories__text">Чикен бургер</p>
+            <h4 class="categories__price">180 грн.</h4>
+            <button class="categories__basket">В корзину</button>
+          </li>
+
+        </ul>
+        <button class="categories__show-more">Показать еще</button>
+      </div>
+
+    </section>
+
+    <section class="discont section">
+      <div class="container">
+        <div class="discont-box">
+          <div class="discont-left">
+            <img src="images/delivery.png" alt="">
+          </div>
+          <div class="discont-right">
+            <h1 class="discont-right__title">
+              Оставайтесь дома,
+              <span class="discont-right__span">а мы позаботимся о еде</span>
+            </h1>
+            <p class="discont-right__text">
+              У нас есть вкусная еда и мы готовы доставить её к вам домой! Воспользуйтесь нашей доставкой прямо сейчас и
+              получите скиидку!
+            </p>
+            <ul class="discont-right__list">
+              <li class="discont-right__item right__item--timer">
+                Быстрая доставка за 15 минут
+              </li>
+              <li class="discont-right__item right__item--courier">
+                Вежливые курьеры
+              </li>
+              <li class="discont-right__item right__item--resturent">
+                Более 500 заведений
+              </li>
+            </ul>
+            <button class="discont-right__btn">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
