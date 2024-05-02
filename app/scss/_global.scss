@@ -7,11 +7,10 @@ button {
   display: inline-block;
   appearance: none;
   padding: 0;
-  margin: 0;
+  border: 0;
   background-color: transparent;
   cursor: pointer;
   font: inherit;
-  outline: transparent;
 }
 
 .sr-only {
@@ -54,4 +53,5 @@ body {
 
 .translucent {
   border-radius: 5px;
+  transition: opacity 0.3s, box-shadow 0.3s, text-decoration 0.3s;
 }
