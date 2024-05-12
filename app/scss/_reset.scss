@@ -2,6 +2,11 @@ html {
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 *,
 *::after,
 *::before {
@@ -53,4 +58,14 @@ a {
   text-decoration: none;
   color: inherit;
   outline: transparent;
+}
+
+button {
+  display: inline-block;
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  font: inherit;
 }

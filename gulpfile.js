@@ -6,7 +6,11 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
+const svgSprite = require('gulp-svg-sprite');
+const replace = require('gulp-replace');
+const cheerio = require('gulp-cheerio');
 const browserSync = require('browser-sync').create();
+
 
 function browsersync() {
   browserSync.init({
@@ -49,7 +53,9 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/mixitup/dist/mixitup.js',
+    'node_modules/slick-carousel/slick/slick.js',
     'app/js/main.js'
+
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
@@ -70,11 +76,50 @@ function cleanDist() {
   return del('dist')
 }
 
+function svgSprites() {
+  return src('app/images/icons/*.svg') // выбираем в папке с иконками все файлы с расширением svg
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: '../sprite.svg', // указываем имя файла спрайта и путь
+          },
+        },
+      })
+    )
+    .pipe(dest('app/images')); // указываем, в какую папку поместить готовый файл спрайта
+}
+
+function svgSprites() {
+  return src('app/images/icons/*.svg')
+    .pipe(cheerio({
+      run: ($) => {
+        $("[fill]").removeAttr("fill"); // очищаем цвет у иконок по умолчанию, чтобы можно было задать свой
+        $("[stroke]").removeAttr("stroke"); // очищаем, если есть лишние атрибуты строк
+        $("[style]").removeAttr("style"); // убираем внутренние стили для иконок
+      },
+      parserOptions: { xmlMode: true },
+    })
+    )
+    .pipe(replace('&gt;', '>'))// боремся с заменой символа 
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: '../sprite.svg',
+          },
+        },
+      })
+    )
+    .pipe(dest('app/images'));
+}
+
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
+  watch(['app/images/icons/*.svg'], svgSprites);
 }
 
 exports.styles = styles;
@@ -84,6 +129,7 @@ exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
+exports.svgSprites = svgSprites;
 
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, scripts, browsersync, watching, svgSprites);
