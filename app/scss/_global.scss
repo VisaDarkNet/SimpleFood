@@ -41,6 +41,20 @@ body {
   transition: box-shadow 0.3s, color 0.3s;
 }
 
+.translucent:focus {
+  box-shadow: 0 0 0 2px rgba($activeElement, 0.7);
+}
+
+.translucent:hover {
+  color: $activeElement;
+}
+
+.translucent:active {
+  text-shadow: 2px 2px 5px rgba($title, 0.5);
+  color: $title;
+  box-shadow: none;
+}
+
 .title {
   font-size: 36px;
   line-height: 1.3;
@@ -59,50 +73,18 @@ body {
 }
 
 .prime-btn:focus {
-  background-color: rgba(255, 122, 80, 0.1);
+  background-color: $fonIcon;
   color: $activeElement;
-  box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  box-shadow: 0 0 0 2px rgba($activeElement, 0.7);
 }
 
 .prime-btn:hover {
   background-color: $white;
   color: $activeElement;
   box-shadow: 0 0 0 2px rgba($activeElement, .7);
-
 }
 
 .prime-btn:active {
   box-shadow: none;
-  background-color: rgba(255, 122, 80, 0.1);
+  background-color: $fonIcon;
 }
-
-
-
-// .footer-top__form-btn.translucent:hover,
-// .delivery__btn.translucent:hover,
-// .discont__btn.translucent:hover {
-//   background-color: $white;
-//   color: $activeElement;
-//   box-shadow: 0 0 0 2px rgba($activeElement, .7);
-
-//   path {
-//     fill: $activeElement;
-//   }
-// }
-
-// .footer-top__form-btn.translucent:focus,
-// .delivery__btn.translucent:focus,
-// .discont__btn.translucent:focus {
-//   background-color: rgba(255, 122, 80, 0.1);
-//   color: $activeElement;
-
-//   path {
-//     fill: $activeElement;
-//   }
-// }
-
-// .footer-top__form-btn.translucent:active,
-// .delivery__btn.translucent:active,
-// .discont__btn.translucent:active {
-//   text-shadow: none;
-// }
