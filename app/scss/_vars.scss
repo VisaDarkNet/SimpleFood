@@ -7,9 +7,6 @@ $white:#fff;
 $title:rgb(54, 56, 83);
 $fonIcon:rgba(255, 122, 80, 0.1);
 
-
-
-
 %rubik-300 {
   font-family: 'Rubik', sans-serif;
   font-weight: 300;
@@ -23,4 +20,10 @@ $fonIcon:rgba(255, 122, 80, 0.1);
 %rubik-500 {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
+}
+
+%rubikItalic-400 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }

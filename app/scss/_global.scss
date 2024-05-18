@@ -88,3 +88,14 @@ body {
   box-shadow: none;
   background-color: $fonIcon;
 }
+
+@media (max-width:768px) {
+  .prime-btn {
+
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 20px 0;
+  }
+}
