@@ -1,0 +1,31 @@
+@mixin pseudo($pos: absolute, $content: '', $back-rep: no-repeat, $back-pos:center, $back-si:cover) {
+  content: $content;
+  position: $pos;
+  background-repeat: $back-rep;
+  background-size: $back-si;
+  background-position: $back-pos;
+}
+
+.class::after {
+  @include pseudo;
+}
+
+@mixin flex-cen($display: flex, $jus: center, $ali: center) {
+  display: $display;
+  justify-content: $jus;
+  align-items: $ali;
+}
+
+.class {
+  @include flex-cen;
+}
+
+@mixin flex-bet($display: flex, $jus: space-between, $ali: center) {
+  display: $display;
+  justify-content: $jus;
+  align-items: $ali;
+}
+
+.class {
+  @include flex-bet;
+}
