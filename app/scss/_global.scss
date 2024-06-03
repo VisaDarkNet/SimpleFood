@@ -39,20 +39,20 @@ body {
 .translucent {
   border-radius: 5px;
   transition: box-shadow 0.3s, color 0.3s;
-}
 
-.translucent:focus {
-  box-shadow: 0 0 0 2px rgba($activeElement, 0.7);
-}
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($activeElement, 0.7);
+  }
 
-.translucent:hover {
-  color: $activeElement;
-}
+  &:hover {
+    color: $activeElement;
+  }
 
-.translucent:active {
-  text-shadow: 2px 2px 5px rgba($title, 0.5);
-  color: $title;
-  box-shadow: none;
+  &:active {
+    text-shadow: 2px 2px 5px rgba($title, 0.5);
+    color: $title;
+    box-shadow: none;
+  }
 }
 
 .title {
@@ -70,23 +70,51 @@ body {
   padding: 12px 32px;
   line-height: 1.3;
   transition: color 0.3s, box-shadow 0.3s, background-color 0.3s;
+
+  &:focus {
+    background-color: $fonIcon;
+    color: $activeElement;
+    box-shadow: 0 0 0 2px rgba($activeElement, 0.7);
+  }
+
+  &:hover {
+    background-color: $white;
+    color: $activeElement;
+    box-shadow: 0 0 0 2px rgba($activeElement, 0.7);
+  }
+
+  &:active {
+    box-shadow: none;
+    background-color: $fonIcon;
+  }
 }
 
-.prime-btn:focus {
-  background-color: $fonIcon;
-  color: $activeElement;
-  box-shadow: 0 0 0 2px rgba($activeElement, 0.7);
-}
+.prime-link {
+  display: inline-block;
+  font-size: 18px;
+  color: $white;
+  background-color: $activeElement;
+  border-radius: 5px;
+  padding: 12px 34px;
+  line-height: 1.3;
+  transition: color 0.3s, box-shadow 0.3s, background-color 0.3s;
 
-.prime-btn:hover {
-  background-color: $white;
-  color: $activeElement;
-  box-shadow: 0 0 0 2px rgba($activeElement, .7);
-}
+  &:focus {
+    background-color: $fonIcon;
+    color: $activeElement;
+    box-shadow: 0 0 0 2px rgba($activeElement, 0.7);
+  }
 
-.prime-btn:active {
-  box-shadow: none;
-  background-color: $fonIcon;
+  &:hover {
+    background-color: $white;
+    color: $activeElement;
+    box-shadow: 0 0 0 2px rgba($activeElement, 0.7);
+  }
+
+  &:active {
+    box-shadow: none;
+    background-color: $fonIcon;
+  }
 }
 
 @media (max-width:768px) {
@@ -118,9 +146,8 @@ body {
     position: relative;
 
     &::after {
-      content: '';
+      @include pseudo;
       background-image: url('../images/icons/icon-chevron.svg');
-      position: absolute;
       width: 6px;
       height: 10px;
       top: 4px;
@@ -142,7 +169,7 @@ body {
   }
 }
 
-.catalog__title{
+.catalog__title {
   font-size: 24px;
   line-height: 1.2;
   color: $title;

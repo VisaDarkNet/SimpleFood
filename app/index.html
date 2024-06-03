@@ -63,7 +63,6 @@
               </button>
             </li>
           </ul>
-
         </nav>
       </div>
     </div>
@@ -83,7 +82,7 @@
             <p class="delivery__text">
               Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
             </p>
-            <a class="delivery__btn prime-btn" href="#">
+            <a class="delivery__link prime-link" href="#">
               Заказать
             </a>
             <a class="delivery__link translucent" href="#">Подробнее</a>
@@ -95,13 +94,13 @@
       </div>
     </section>
 
-    <section class="popular-categories section ">
+    <section class="popular-categories section">
       <div class="container">
         <h2 class="popular-categories__title title">
           Популярные категории
         </h2>
-        <ul class="popular-categories__filter">
-          <li class="popular-categories__list ">
+        <ul class="popular-categories__list">
+          <li class="popular-categories__item">
             <button class="popular-categories__btn" data-filter="all" type="button">
               <svg class="popular-categories__icon">
                 <use xlink:href="images/sprite.svg#icon-burger"></use>
@@ -109,7 +108,7 @@
               Бургеры
             </button>
           </li>
-          <li class="popular-categories__list">
+          <li class="popular-categories__item">
             <button class="popular-categories__btn" data-filter=".category-b" type="button">
               <svg class="popular-categories__icon">
                 <use xlink:href="images/sprite.svg#icon-pizza"></use>
@@ -117,7 +116,7 @@
               Пицца
             </button>
           </li>
-          <li class="popular-categories__list">
+          <li class="popular-categories__item">
             <button class="popular-categories__btn " data-filter=".category-c" type="button">
               <svg class="popular-categories__icon">
                 <use xlink:href="images/sprite.svg#icon-sandwich"></use>
@@ -125,7 +124,7 @@
               Сендвичи
             </button>
           </li>
-          <li class="popular-categories__list">
+          <li class="popular-categories__item">
             <button class="popular-categories__btn " data-filter=".category-d" type="button">
               <svg class="popular-categories__icon">
                 <use xlink:href="images/sprite.svg#icon-asia"></use>
@@ -133,7 +132,7 @@
               Азиатская кухня
             </button>
           </li>
-          <li class="popular-categories__list">
+          <li class="popular-categories__item">
             <button class="popular-categories__btn " data-filter=".category-a" type="button">
               <svg class="popular-categories__icon">
                 <use xlink:href="images/sprite.svg#icon-dish"></use>
@@ -281,7 +280,7 @@
                 Более 500 заведений
               </li>
             </ul>
-            <button class="discount__btn prime-btn" type="button">Подробнее</button>
+            <a class="discount__link prime-link" href="#">Подробнее</a>
           </div>
         </div>
       </div>
@@ -438,8 +437,10 @@
                     на
                     доставку - однозначно рекомендую!
                   </blockquote>
-                  <figcaption class="reviews__author">Дарья</figcaption>
-                  <span class="reviews__text">Ценитель вкусной еды</span>
+                  <figcaption class="reviews__author">Дарья
+                    <span class="reviews__text">Ценитель вкусной еды</span>
+                  </figcaption>
+
                 </figure>
               </div>
             </div>
@@ -456,9 +457,9 @@
                     на
                     доставку - однозначно рекомендую!
                   </blockquote>
-                  <figcaption class="reviews__author">Дарья</figcaption>
-                  <span class="reviews__text">Ценитель вкусной еды</span>
-                </figure>
+                  <figcaption class="reviews__author">Дарья
+                    <span class="reviews__text">Ценитель вкусной еды</span>
+                  </figcaption>
               </div>
             </div>
           </li>
@@ -474,9 +475,9 @@
                     на
                     доставку - однозначно рекомендую!
                   </blockquote>
-                  <figcaption class="reviews__author">Дарья</figcaption>
-                  <span class="reviews__text">Ценитель вкусной еды</span>
-                </figure>
+                  <figcaption class="reviews__author">Дарья
+                    <span class="reviews__text">Ценитель вкусной еды</span>
+                  </figcaption>
               </div>
             </div>
           </li>
@@ -492,20 +493,20 @@
                     на
                     доставку - однозначно рекомендую!
                   </blockquote>
-                  <figcaption class="reviews__author">Дарья</figcaption>
-                  <span class="reviews__text">Ценитель вкусной еды</span>
-                </figure>
+                  <figcaption class="reviews__author">Дарья
+                    <span class="reviews__text">Ценитель вкусной еды</span>
+                  </figcaption>
               </div>
             </div>
           </li>
 
         </ul>
+        <div class="reviews-arrows"></div>
 
-        <div class="reviews__arrows"></div>
       </div>
     </section>
 
-    <section class="mobile-app section">
+    <section class="mobile-app">
       <div class="container">
         <div class="mobile-app__box">
           <div class="mobile-app__content">
@@ -544,13 +545,13 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-top section">
+      <div class="footer-top">
         <div class="footer-top__item">
           <a class="logo" href="#">
             <img class="logo__img " src="images/logo.svg" width="200" height="39" alt="Логотип компании SimpelFood">
           </a>
 
-          <form class="form" action="">
+          <form class="form" action="#">
             <label class="form__label" for="name" aria-label="напишите ваш email"></label>
             <input class="form__input" type="email" name="email" placeholder="Ваш email" required>
             <button class="form__btn prime-btn" type="submit">
@@ -561,6 +562,7 @@
             </button>
           </form>
         </div>
+
         <ul class="menu-bottom__list">
           <li class="menu-bottom__item">
             <a class="menu-bottom__link translucent" href="#">
@@ -623,19 +625,21 @@
             </a>
           </li>
         </ul>
-        <div class="contacts">
-          <ul class="contacts__list">
-            <li class="contacts__item  contacts__item--location">
-              <a class="contacts__link translucent" href="#" target="_blank" rel="noopener noreferrer">
+
+        <div class="footer-contacts">
+
+          <ul class="our-contacts">
+            <li class="our-contacts__item our-contacts__item--location">
+              <a class="our-contacts__link translucent" href="#" target="_blank" rel="noopener noreferrer">
                 ул. Т.Г.Шевченко, 1
               </a>
             </li>
-            <li class="contacts__item  contacts__item--calling">
-              <a class="contacts__link translucent" href="tel:+380501112233">
+            <li class="our-contacts__item  our-contacts__item--calling">
+              <a class="our-contacts__link translucent" href="tel:+380501112233">
                 380501112233
               </a>
             </li>
-            <li class="contacts__item  contacts__item--message">
+            <li class="our-contacts__item  our-contacts__item--message">
               <a class="our-contacts__link translucent" href="mailto:support@sfood.com">
                 support@sfood.com
               </a>
@@ -668,10 +672,9 @@
               </a>
             </li>
           </ul>
+
         </div>
       </div>
-
-
 
     </div>
     <div class="footer-bottom">

@@ -2,12 +2,13 @@ $(function () {
   $('.reviews__box').slick({
     dots: true,
     infinite: false,
-    prevArrow: '<button type="button" class="reviews__slick-prev"> <svg class="reviews__icon"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg> </button>',
-    nextArrow: '<button type="button" class="reviews__slick-next"> <svg class="reviews__icon"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg> </button>',
-    appendArrows: '.reviews__arrows',
-
+    prevArrow: '<button type="button" class="reviews-arrows__slick-prev"> <svg class="reviews__icon"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg> </button>',
+    nextArrow: '<button type="button" class="reviews-arrows__slick-next"> <svg class="reviews__icon"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg> </button>',
+    appendArrows: '.reviews-arrows',
   });
+
 });
+
 
 $(window).on('load resize', function () {
   if ($(window).width() < 576) {
