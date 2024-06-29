@@ -17,13 +17,95 @@
   <header class="header">
     <div class="container">
       <div class="header__inner">
+
         <nav class="header__menu">
           <a class="logo header__logo" href="#">
             <img class="logo__img " src="images/logo.svg" width="200" height="39" alt="Логотип компании SimpelFood">
           </a>
-          <button class="burger">
-            <span class="burger__menu"></span>
+          <button class="burger" type="button">
+            <span class="burger__line"></span>
+            <span class="sr-only">Открыть меню</span>
           </button>
+
+          <div class="page-menu">
+
+            <div class="page-menu__header">
+              <a class="logo header__logo" href="#">
+                <img class="logo__img " src="images/logo.svg" width="200" height="39" alt="Логотип компании SimpelFood">
+              </a>
+              <button class="page-menu__btn" type="button">
+                <span class="page-menu__line"></span>
+              </button>
+            </div>
+
+            <div class="page-menu__menu">
+              <ul class="page-menu__list">
+                <li class="page-menu__item">
+                  <a class="page-menu__link translucent menu__link--active" href="#">
+                    Главная
+                  </a>
+                </li>
+                <li class="page-menu__item">
+                  <a class="page-menu__link translucent " href="#">
+                    Блюда
+                  </a>
+                </li>
+                <li class="page-menu__item">
+                  <a class="page-menu__link translucent" href="#">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="page-menu__contacts">
+              <ul class="our-contacts">
+                <li class="our-contacts__item our-contacts__item--location">
+                  <a class="our-contacts__link translucent" href="#" target="_blank" rel="noopener noreferrer">
+                    ул. Т.Г.Шевченко, 1
+                  </a>
+                </li>
+                <li class="our-contacts__item  our-contacts__item--calling">
+                  <a class="our-contacts__link translucent" href="tel:+380501112233">
+                    380501112233
+                  </a>
+                </li>
+                <li class="our-contacts__item  our-contacts__item--message">
+                  <a class="our-contacts__link translucent" href="mailto:support@sfood.com">
+                    support@sfood.com
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="social-list">
+                <li class="social-list__item">
+                  <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                    <span class="sr-only">написать нам facebook</span>
+                    <svg class="social-list__icon">
+                      <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                    <span class="sr-only">написать нам twitter </span>
+                    <svg class="social-list__icon">
+                      <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                    <span class=" sr-only">написать нам instagram</span>
+                    <svg class="social-list__icon">
+                      <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <ul class="menu">
             <li class="menu__item">
               <a class="menu__link translucent menu__link--active" href="#">
@@ -44,7 +126,7 @@
 
           <ul class="user-info">
             <li class="user-info__item">
-              <button class="user-info__link" type="button">
+              <button class="user-info__btn" type="button">
                 <span class="sr-only">поиск товара</span>
                 <svg class="user-info__icon user-info__icon--search">
                   <use xlink:href="images/sprite.svg#icon-search"></use>
@@ -52,7 +134,7 @@
               </button>
             </li>
             <li class="user-info__item">
-              <button class="user-info__link" type="button">
+              <button class="user-info__btn" type="button">
                 <span class="sr-only">товары добавленные в корзину</span>
                 <svg class="user-info__icon user-info__icon--cart">
                   <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -87,7 +169,7 @@
             </a>
             <a class="delivery__link translucent" href="#">Подробнее</a>
           </div>
-          <div class="delivery__img" style="background-image: url('images/scooter.png')">
+          <div class="delivery__img" style="background-image: url('images/scooter.png')" width="560" height="660">
             <span class="sr-only">мульташное изображение парня на скутере</span>
           </div>
         </div>
@@ -148,7 +230,7 @@
               <img class="product-card__img" src="images/menu/cheeseburger-sheet.png" width="140" height="140"
                 alt="Чизбургер с листьями салата">
               <h3 class="product-card__text">Чизбургер с листьями салата</h3>
-              <span class="product-card__price">160 грн.</span>
+              <span class="product-card__price">160<span class="product-card__сurrency">грн.</span></span>
               <button class="product-card__basket prime-btn" type="button">В корзину</button>
             </article>
           </li>
@@ -157,7 +239,7 @@
             <article class="product-card">
               <img class="product-card__img" src="images/menu/bif-burger.png" width="140" height="140" alt="Бифбургер">
               <h3 class="product-card__text">Бифбургер</h3>
-              <span class="product-card__price">190 грн.</span>
+              <span class="product-card__price">190<span class="product-card__сurrency">грн.</span></span>
               <button class="product-card__basket prime-btn" type="button">В корзину</button>
             </article>
           </li>
@@ -167,7 +249,7 @@
               <img class="product-card__img" src="images/menu/king-burger.png" width="140" height="140"
                 alt="Королевский чизбургер">
               <h3 class="product-card__text">Королевский чизбургер</h3>
-              <span class="product-card__price">260 грн.</span>
+              <span class="product-card__price">260<span class="product-card__сurrency">грн.</span></span>
               <button class="product-card__basket prime-btn" type="button">В корзину</button>
             </article>
           </li>
@@ -177,7 +259,7 @@
               <img class="product-card__img" src="images/menu/black-burger.png" width="140" height="140"
                 alt="Черный гамбургер">
               <h3 class="product-card__text">Черный гамбургер</h3>
-              <span class="product-card__price">199 грн.</span>
+              <span class="product-card__price">199<span class="product-card__сurrency">грн.</span></span>
               <button class="product-card__basket prime-btn" type="button">В корзину</button>
             </article>
           </li>
@@ -187,7 +269,7 @@
               <img class="product-card__img" src="images/menu/chikin-burger.png" width="140" height="140"
                 alt="Чикен бургер">
               <h3 class="product-card__text">Чикен бургер</h3>
-              <span class="product-card__price">180 грн.</span>
+              <span class="product-card__price">180<span class="product-card__сurrency">грн.</span></span>
               <button class="product-card__basket prime-btn" type="button">В корзину</button>
             </article>
           </li>
@@ -197,7 +279,7 @@
               <img class="product-card__img" src="images/menu/cheeseburger-sheet.png" width="140" height="140"
                 alt="Чизбургер с листьями салата">
               <h3 class="product-card__text">Чизбургер с листьями салата</h3>
-              <span class="product-card__price">160 грн.</span>
+              <span class="product-card__price">160<span class="product-card__сurrency">грн.</span></span>
               <button class="product-card__basket prime-btn" type="button">В корзину</button>
             </article>
           </li>
@@ -206,7 +288,7 @@
             <article class="product-card">
               <img class="product-card__img" src="images/menu/bif-burger.png" width="140" height="140" alt="Бифбургер">
               <h3 class="product-card__text">Бифбургер</h3>
-              <span class="product-card__price">190 грн.</span>
+              <span class="product-card__price">190<span class="product-card__сurrency">грн.</span></span>
               <button class="product-card__basket prime-btn" type="button">В корзину</button>
             </article>
           </li>
@@ -216,7 +298,7 @@
               <img class="product-card__img" src="images/menu/king-burger.png" width="140" height="140"
                 alt="Королевский чизбургер">
               <h3 class="product-card__text">Королевский чизбургер</h3>
-              <span class="product-card__price">260 грн.</span>
+              <span class="product-card__price">260<span class="product-card__сurrency">грн.</span></span>
               <button class="product-card__basket prime-btn" type="button">В корзину</button>
             </article>
           </li>
@@ -226,7 +308,7 @@
               <img class="product-card__img" src="images/menu/black-burger.png" width="140" height="140"
                 alt="Черный гамбургер">
               <h3 class="product-card__text">Черный гамбургер</h3>
-              <span class="product-card__price">199 грн.</span>
+              <span class="product-card__price">199<span class="product-card__сurrency">грн.</span></span>
               <button class="product-card__basket prime-btn" type="button">В корзину</button>
             </article>
           </li>
@@ -236,7 +318,7 @@
               <img class="product-card__img" src="images/menu/chikin-burger.png" width="140" height="140"
                 alt="Чикен бургер">
               <h3 class="product-card__text">Чикен бургер</h3>
-              <span class="product-card__price">180 грн.</span>
+              <span class="product-card__price">180<span class="product-card__сurrency">грн.</span></span>
               <button class="product-card__basket prime-btn" type="button">В корзину</button>
             </article>
           </li>
@@ -291,10 +373,9 @@
         <h2 class="restaurant__title title">
           Лучшие рестораны
         </h2>
-
         <ul class="restaurant__box">
           <li class="restaurant__item">
-
+            
             <article class="restaurant-card">
               <img class="restaurant-card__img" src="images/menu/blaze-pizza.jpg" width="370" height="300"
                 alt="ресторан Blaze Pizza">
@@ -303,8 +384,9 @@
                   Blaze Pizza
                 </h3>
                 <div class="restaurant-card__info">
-                  <time class="restaurant-card__time">11:00 - 22:00</time>
+                  <time class="restaurant-card__time" datatime="11:00 - 22:00">11:00 - 22:00</time>
                   <a class="restaurant-card__link" href="#">
+                    <span class="sr-only">Ресторан Blaze Pizza</span>
                     <svg class="restaurant-card__link-icon">
                       <use xlink:href="images/sprite.svg#icon-arrow-small"></use>
                     </svg>
@@ -324,8 +406,9 @@
                   Pizza Runcho
                 </h3>
                 <div class="restaurant-card__info">
-                  <time class="restaurant-card__time">12:00 - 21:00</time>
+                  <time class="restaurant-card__time" datatime="12:00 - 21:00">12:00 - 21:00</time>
                   <a class="restaurant-card__link" href="#">
+                    <span class="sr-only">Ресторан Pizza Runcho</span>
                     <svg class="restaurant-card__link-icon">
                       <use xlink:href="images/sprite.svg#icon-arrow-small"></use>
                     </svg>
@@ -344,8 +427,9 @@
                   Pizza Hut
                 </h3>
                 <div class="restaurant-card__info">
-                  <time class="restaurant-card__time">11:00 - 22:00</time>
+                  <time class="restaurant-card__time" datatime="11:00 - 22:00">11:00 - 22:00</time>
                   <a class="restaurant-card__link" href="#">
+                    <span class="sr-only">Ресторан Pizza Hut</span>
                     <svg class="restaurant-card__link-icon">
                       <use xlink:href="images/sprite.svg#icon-arrow-small"></use>
                     </svg>
@@ -364,8 +448,9 @@
                   McDonald`s
                 </h3>
                 <div class="restaurant-card__info">
-                  <time class="restaurant-card__time">06:00 - 23:00</time>
+                  <time class="restaurant-card__time" datatime="06:00 - 23:00">06:00 - 23:00</time>
                   <a class="restaurant-card__link" href="#">
+                    <span class="sr-only">Ресторан McDonald`s</span>
                     <svg class="restaurant-card__link-icon">
                       <use xlink:href="images/sprite.svg#icon-arrow-small"></use>
                     </svg>
@@ -383,8 +468,9 @@
                   KFC
                 </h3>
                 <div class="restaurant-card__info">
-                  <time class="restaurant-card__time">06:00 - 23:30</time>
+                  <time class="restaurant-card__time" datatime="06:00 - 23:30">06:00 - 23:30</time>
                   <a class="restaurant-card__link" href="#">
+                    <span class="sr-only">Ресторан KFC</span>
                     <svg class="restaurant-card__link-icon">
                       <use xlink:href="images/sprite.svg#icon-arrow-small"></use>
                     </svg>
@@ -403,8 +489,9 @@
                   Star Burgers
                 </h3>
                 <div class="restaurant-card__info">
-                  <time class="restaurant-card__time">09:00 - 21:00</time>
+                  <time class="restaurant-card__time" datatime="09:00 - 21:00">09:00 - 21:00</time>
                   <a class="restaurant-card__link" href="#">
+                    <span class="sr-only">Ресторан Star Burgers</span>
                     <svg class="restaurant-card__link-icon">
                       <use xlink:href="images/sprite.svg#icon-arrow-small"></use>
                     </svg>
@@ -422,15 +509,15 @@
         <h2 class="reviews__title title">
           Отзывы клиентов
         </h2>
-
         <ul class="reviews__box">
-
           <li class="reviews__item">
             <div class="reviews__content">
               <img class="reviews__img" src="images/clients-darya.png" width="300" height="300" alt="отзывы клиентов">
+
               <div class="reviews__blockquote">
+
                 <figure class="reviews__figure">
-                  <blockquote class="reviews__blockquote-quote">
+                  <blockquote class="reviews__quote">
                     SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
                     приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит
                     скидки
@@ -440,7 +527,26 @@
                   <figcaption class="reviews__author">Дарья
                     <span class="reviews__text">Ценитель вкусной еды</span>
                   </figcaption>
+                </figure>
 
+              </div>
+            </div>
+          </li>
+
+          <li class="reviews__item">
+            <div class="reviews__content">
+              <img class="reviews__img" src="images/clients-darya.png" width="300" height="300" alt="отзывы клиентов">
+              <div class="reviews__blockquote">
+                <figure class="reviews__figure">
+                  <blockquote class="reviews__quote">
+                    SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
+                    приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки
+                    на
+                    доставку - однозначно рекомендую!
+                  </blockquote>
+                  <figcaption class="reviews__author">Дарья
+                    <span class="reviews__text">Ценитель вкусной еды</span>
+                  </figcaption>
                 </figure>
               </div>
             </div>
@@ -451,7 +557,7 @@
               <img class="reviews__img" src="images/clients-darya.png" width="300" height="300" alt="отзывы клиентов">
               <div class="reviews__blockquote">
                 <figure class="reviews__figure">
-                  <blockquote class="reviews__blockquote-quote">
+                  <blockquote class="reviews__quote">
                     SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
                     приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки
                     на
@@ -460,6 +566,7 @@
                   <figcaption class="reviews__author">Дарья
                     <span class="reviews__text">Ценитель вкусной еды</span>
                   </figcaption>
+                </figure>
               </div>
             </div>
           </li>
@@ -469,7 +576,7 @@
               <img class="reviews__img" src="images/clients-darya.png" width="300" height="300" alt="отзывы клиентов">
               <div class="reviews__blockquote">
                 <figure class="reviews__figure">
-                  <blockquote class="reviews__blockquote-quote">
+                  <blockquote class="reviews__quote">
                     SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
                     приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки
                     на
@@ -478,24 +585,7 @@
                   <figcaption class="reviews__author">Дарья
                     <span class="reviews__text">Ценитель вкусной еды</span>
                   </figcaption>
-              </div>
-            </div>
-          </li>
-
-          <li class="reviews__item">
-            <div class="reviews__content">
-              <img class="reviews__img" src="images/clients-darya.png" width="300" height="300" alt="отзывы клиентов">
-              <div class="reviews__blockquote">
-                <figure class="reviews__figure">
-                  <blockquote class="reviews__blockquote-quote">
-                    SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
-                    приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки
-                    на
-                    доставку - однозначно рекомендую!
-                  </blockquote>
-                  <figcaption class="reviews__author">Дарья
-                    <span class="reviews__text">Ценитель вкусной еды</span>
-                  </figcaption>
+                </figure>
               </div>
             </div>
           </li>
@@ -550,10 +640,9 @@
           <a class="logo" href="#">
             <img class="logo__img " src="images/logo.svg" width="200" height="39" alt="Логотип компании SimpelFood">
           </a>
-
           <form class="form" action="#">
-            <label class="form__label" for="name" aria-label="напишите ваш email"></label>
-            <input class="form__input" type="email" name="email" placeholder="Ваш email" required>
+            <label class="form__label" for="email" aria-label="напишите ваш email"></label>
+            <input class="form__input" type="email" id="email" name="email" placeholder="Ваш email" required>
             <button class="form__btn prime-btn" type="submit">
               <svg class="form__icon">
                 <use xlink:href="images/sprite.svg#icon-frame"></use>
@@ -672,13 +761,12 @@
               </a>
             </li>
           </ul>
-
         </div>
-      </div>
 
-    </div>
-    <div class="footer-bottom">
-      <span class="footer-bottom__copy">© 2022 Simple Food</span>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-bottom__copy">© 2022 Simple Food</span>
+      </div>
     </div>
   </footer>
 

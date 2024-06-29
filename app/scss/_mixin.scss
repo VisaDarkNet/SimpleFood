@@ -29,3 +29,10 @@
 .class {
   @include flex-bet;
 }
+
+@mixin burger($burgerWidth:44px, $burgerHeight:44px, $pos:relative, $burgerColor:$title) {
+  width: $burgerWidth;
+  height: $burgerHeight;
+  position: $pos;
+  color: $burgerColor;
+}

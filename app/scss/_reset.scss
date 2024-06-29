@@ -44,6 +44,7 @@ ul {
 img {
   max-width: 100%;
   display: block;
+  object-fit: cover;
 }
 
 input,
@@ -68,4 +69,17 @@ button {
   background-color: transparent;
   cursor: pointer;
   font: inherit;
+}
+
+option {
+  font-weight: normal;
+  display: inline-block;
+  min-height: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+address {
+  display: block;
+  font-style: normal;
 }

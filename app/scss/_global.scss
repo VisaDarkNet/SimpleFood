@@ -36,6 +36,22 @@ body {
   padding: 60px 0;
 }
 
+.lock {
+  overflow: hidden;
+  position: relative;
+}
+
+.lock::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.5);
+}
+
 .translucent {
   border-radius: 5px;
   transition: box-shadow 0.3s, color 0.3s;
@@ -119,53 +135,11 @@ body {
 
 @media (max-width:768px) {
   .prime-btn {
-
     font-size: 14px;
   }
 
   .section {
     padding: 20px 0;
-  }
-}
-
-.breadcrumbs {
-  display: flex;
-  align-items: center;
-  background-color: rgba(255, 122, 80, 0.1);
-  height: 65px;
-
-  &__list {
-    display: flex;
-    gap: 17px;
-    font-size: 14px;
-    line-height: 1.2;
-    color: #505050;
-  }
-
-  &__item {
-    position: relative;
-
-    &::after {
-      @include pseudo;
-      background-image: url('../images/icons/icon-chevron.svg');
-      width: 6px;
-      height: 10px;
-      top: 4px;
-      left: -11px;
-      right: 0;
-      bottom: 0;
-    }
-
-    &:last-child {
-      color: $activeElement;
-    }
-
-    &:first-child {
-      &::after {
-        display: none;
-      }
-    }
-
   }
 }
 
