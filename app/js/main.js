@@ -11,7 +11,6 @@ $(function () {
   });
 
 
-
   $(".product-description__star,.comments__star").rateYo({
     starWidth: "16px",
     starHeight: "16px",
@@ -75,11 +74,19 @@ $(function () {
     appendArrows: '.recent-arrows',
   });
 
+  $('.product-description__slider').slick({
+    dots: false,
+    infinite: false,
+    prevArrow: '<button type="button" class="product-description__slick-prev"><svg class="product-description__slider-icon"><use xlink:href="images/sprite.svg#icon-bigarrow-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="product-description__slick-next"><svg class="product-description__slider-icon"><use xlink:href="images/sprite.svg#icon-bigarrow-left"></use></svg></button>',
+  })
 
 
   $('.reviews__box').slick({
     dots: true,
     infinite: false,
+    // slidesToShow: 4,
+    // slidesToScroll: 5,
     prevArrow: '<button type="button" class="reviews-arrows__slick-prev"> <svg class="reviews__icon"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg> </button>',
     nextArrow: '<button type="button" class="reviews-arrows__slick-next"> <svg class="reviews__icon"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg> </button>',
     appendArrows: '.reviews-arrows',
@@ -100,7 +107,7 @@ $(window).on('load resize', function () {
     $('.restaurant__box:not(.slick-initialized)').slick({
       arrows: false,
       dots: true,
-      infinite: true,
+      infinite: false,
       speed: 100,
       slidesToShow: 1
     });
@@ -116,7 +123,7 @@ var mixer = mixitup('.popular-categories__content');
 document.addEventListener('DOMContentLoaded', () => {
 
   const burger = document.querySelector('.burger');
-  const mobileMenu = document.querySelector('.page-menu'); 
+  const mobileMenu = document.querySelector('.page-menu');
   const bodyLock = document.querySelector('body');
 
   document.addEventListener('click', function (e) {
@@ -127,12 +134,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   burger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('menu--active'); 
-    if (mobileMenu.classList.contains('menu--active')) { 
-      bodyLock.classList.add('lock'); 
+    mobileMenu.classList.toggle('menu--active');
+    if (mobileMenu.classList.contains('menu--active')) {
+      bodyLock.classList.add('lock');
     }
-    else { 
-      bodyLock.classList.remove('lock'); 
+    else {
+      bodyLock.classList.remove('lock');
     }
   });
 
