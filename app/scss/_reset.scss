@@ -2,6 +2,11 @@ html {
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 *,
 *::after,
 *::before {
@@ -39,6 +44,7 @@ ul {
 img {
   max-width: 100%;
   display: block;
+  object-fit: cover;
 }
 
 input,
@@ -53,4 +59,27 @@ a {
   text-decoration: none;
   color: inherit;
   outline: transparent;
+}
+
+button {
+  display: inline-block;
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+option {
+  font-weight: normal;
+  display: inline-block;
+  min-height: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+address {
+  display: block;
+  font-style: normal;
 }

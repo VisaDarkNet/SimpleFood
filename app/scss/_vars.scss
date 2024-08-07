@@ -1,0 +1,30 @@
+$silver-100:#f9faff;
+$silver-200:#ececec;
+$gray:#c2c2c2;
+$dark:#31352b;
+$activeElement:rgb(255, 104, 56);
+$focusElement:rgba(255, 104, 56, .7);
+$white:#fff;
+$title:#363853;
+$fonIcon:rgba(255, 122, 80, 0.1);
+
+%rubik-300 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
+%rubik-400 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+%rubik-500 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}
+
+%rubikItalic-400 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
