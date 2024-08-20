@@ -68,7 +68,7 @@ $(function () {
     dots: false,
     infinite: false,
     slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToScroll: 1,
     prevArrow: '<button type="button" class="recent-arrows__slick-prev"> <svg class="recent__icon"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg> </button>',
     nextArrow: '<button type="button" class="recent-arrows__slick-next"> <svg class="recent__icon"><use xlink:href="images/sprite.svg#icon-prev-arrow"></use></svg> </button>',
     appendArrows: '.recent-arrows',

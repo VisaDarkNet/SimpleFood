@@ -18,12 +18,93 @@
     <div class="container">
       <div class="header__inner">
         <nav class="header__menu">
-          <a class="logo header__logo" href="#">
+          <a class="logo header__logo" href="index.html">
             <img class="logo__img " src="images/logo.svg" width="200" height="39" alt="Логотип компании SimpelFood">
           </a>
-          <button class="burger">
-            <span class="burger__menu"></span>
+          <button class="burger" type="button">
+            <span class="burger__line"></span>
+            <span class="sr-only">Открыть меню</span>
           </button>
+
+          <div class="page-menu">
+
+            <div class="page-menu__header">
+              <a class="logo header__logo" href="index.html">
+                <img class="logo__img " src="images/logo.svg" width="200" height="39" alt="Логотип компании SimpelFood">
+              </a>
+              <button class="page-menu__btn" type="button">
+                <span class="page-menu__line"></span>
+              </button>
+            </div>
+
+            <div class="page-menu__menu">
+              <ul class="page-menu__list">
+                <li class="page-menu__item">
+                  <a class="page-menu__link translucent menu__link--active" href="#">
+                    Главная
+                  </a>
+                </li>
+                <li class="page-menu__item">
+                  <a class="page-menu__link translucent " href="catalog-products.html">
+                    Блюда
+                  </a>
+                </li>
+                <li class="page-menu__item">
+                  <a class="page-menu__link translucent" href="product-description.html">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="page-menu__contacts">
+              <ul class="our-contacts">
+                <li class="our-contacts__item our-contacts__item--location">
+                  <a class="our-contacts__link translucent" href="#" target="_blank" rel="noopener noreferrer">
+                    ул. Т.Г.Шевченко, 1
+                  </a>
+                </li>
+                <li class="our-contacts__item  our-contacts__item--calling">
+                  <a class="our-contacts__link translucent" href="tel:+380501112233">
+                    380501112233
+                  </a>
+                </li>
+                <li class="our-contacts__item  our-contacts__item--message">
+                  <a class="our-contacts__link translucent" href="mailto:support@sfood.com">
+                    support@sfood.com
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="social-list">
+                <li class="social-list__item">
+                  <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                    <span class="sr-only">написать нам facebook</span>
+                    <svg class="social-list__icon">
+                      <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                    <span class="sr-only">написать нам twitter </span>
+                    <svg class="social-list__icon">
+                      <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                    <span class=" sr-only">написать нам instagram</span>
+                    <svg class="social-list__icon">
+                      <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <ul class="menu">
             <li class="menu__item">
               <a class="menu__link translucent menu__link--active" href="#">
@@ -31,12 +112,12 @@
               </a>
             </li>
             <li class="menu__item">
-              <a class="menu__link translucent " href="#">
+              <a class="menu__link translucent " href="catalog-products.html">
                 Блюда
               </a>
             </li>
             <li class="menu__item">
-              <a class="menu__link translucent" href="#">
+              <a class="menu__link translucent" href="#contacts-1">
                 Контакты
               </a>
             </li>
@@ -76,7 +157,7 @@
       <div class="container">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Главная </a>
+            <a class="breadcrumbs__link" href="index.html">Главная </a>
           </li>
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="#">Каталог товаров</a>
@@ -333,7 +414,7 @@
                 <li class="pagination__item">
                   <span class="pagination__item-number">2</span>
                 </li>
-                <li class="pagination__item">
+                <li class="pagination__item pagination__item--dots">
                   <span class="pagination__item-number">...</span>
                 </li>
                 <li class="pagination__item">
@@ -393,7 +474,7 @@
 
     <section class="restaurant section">
       <div class="container">
-        <h2 class="restaurant__title title">
+        <h2 class="restaurant__title title restaurant__title-sale">
           Акции и скидки
         </h2>
         <ul class="restaurant__box">
@@ -516,7 +597,7 @@
           </li>
         </ul>
         <div class="footer-contacts">
-          <ul class="our-contacts">
+          <ul class="our-contacts" id="contacts-1">
             <li class="our-contacts__item our-contacts__item--location">
               <a class="our-contacts__link translucent" href="#" target="_blank" rel="noopener noreferrer">
                 ул. Т.Г.Шевченко, 1
